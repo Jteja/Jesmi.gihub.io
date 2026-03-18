@@ -88,15 +88,16 @@
 
         .header-content {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             gap: 1.5rem;
+            flex-direction: column;
         }
 
         .logo {
             font-family: 'Instrument Serif', serif;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: var(--accent-primary);
             text-shadow: 0 0 20px var(--glow);
@@ -613,6 +614,152 @@
             color: var(--accent-primary);
         }
 
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card::before {
+            content: '✓';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            color: var(--accent-secondary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .cert-card:hover::before {
+            opacity: 1;
+        }
+
+        .cert-card:hover {
+            border-color: var(--accent-secondary);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.2);
+        }
+
+        .cert-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-name {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .cert-issuer {
+            font-size: 0.85rem;
+            color: var(--accent-secondary);
+            margin-bottom: 0.3rem;
+        }
+
+        .cert-date {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* AI Projects Section */
+        .ai-projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .ai-project-card {
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(26, 31, 46, 0.8) 100%);
+            border: 1px solid var(--border-subtle);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, rgba(0, 255, 136, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .ai-project-card:hover::before {
+            opacity: 1;
+        }
+
+        .ai-project-card:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 217, 255, 0.3);
+        }
+
+        .ai-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: var(--bg-primary);
+            padding: 0.4rem 1rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ai-project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .ai-project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ai-tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ai-tech-badge {
+            background: rgba(0, 217, 255, 0.15);
+            color: var(--accent-primary);
+            padding: 0.4rem 0.9rem;
+            font-size: 0.75rem;
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            font-weight: 500;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -669,6 +816,8 @@
                     <a href="#skills">Skills</a>
                     <a href="#experience">Experience</a>
                     <a href="#projects">Expertise</a>
+                    <a href="#ai-projects">AI Projects</a>
+                    <a href="#certifications">Certifications</a>
                     <a href="#contact">Contact</a>
                 </nav>
             </div>
@@ -678,12 +827,13 @@
     <main class="container">
         <!-- Hero Section -->
         <section class="hero" id="about">
-            <div class="hero-subtitle">Cloud SRE & DevOps Engineer</div>
+            <div class="hero-subtitle">Cloud SRE • AI Automation Architect • DevOps Engineer</div>
             <h1>Building Resilient Infrastructure<br>at Scale</h1>
             <p class="hero-description">
                 Site Reliability Engineer with <span class="highlight">6+ years</span> architecting cloud-native solutions, 
                 automating infrastructure, and ensuring <span class="highlight">99.9%+ uptime</span> for mission-critical systems. 
-                Specialized in <span class="highlight">AWS, Kubernetes, Terraform</span>, and driving operational excellence through 
+                Building <span class="highlight">AI-powered automation platforms</span> while maintaining expertise in 
+                <span class="highlight">AWS, Kubernetes, Terraform</span>, and driving operational excellence through 
                 observability, automation, and engineering best practices.
             </p>
             <div class="cta-buttons">
@@ -1008,10 +1158,122 @@
             </div>
         </section>
 
+        <!-- AI Projects Section -->
+        <section class="section" id="ai-projects">
+            <div class="section-header">
+                <span class="section-number">04.</span>
+                <h2>AI Automation & Innovation</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="ai-projects-grid">
+                <div class="ai-project-card">
+                    <div class="ai-badge">🤖 Multi-tenant Platform</div>
+                    <h3>jidockwork.com - AI Chatbot Platform</h3>
+                    <p class="ai-project-description">
+                        Production AI chatbot platform serving restaurants, salons, and dental offices with intelligent 
+                        customer engagement. Implemented JWT authentication with bcrypt encryption, dark glass morphism UI, 
+                        and dynamic menu integration across WordPress and GoDaddy with Nginx hosting.
+                    </p>
+                    <div class="ai-tech-stack">
+                        <span class="ai-tech-badge">n8n</span>
+                        <span class="ai-tech-badge">PostgreSQL</span>
+                        <span class="ai-tech-badge">OpenAI API</span>
+                        <span class="ai-tech-badge">Docker</span>
+                        <span class="ai-tech-badge">Cloudflare Tunnel</span>
+                        <span class="ai-tech-badge">Nginx</span>
+                    </div>
+                </div>
+
+                <div class="ai-project-card">
+                    <div class="ai-badge">🚀 CI/CD Intelligence</div>
+                    <h3>DeployMind - Monitoring Intelligence</h3>
+                    <p class="ai-project-description">
+                        AI-powered CI/CD monitoring agent for automated incident detection and response. 
+                        Six-table PostgreSQL schema for comprehensive deployment tracking. Seamless integration 
+                        with existing DevOps stack including GitLab, PagerDuty, and Grafana for workflow automation.
+                    </p>
+                    <div class="ai-tech-stack">
+                        <span class="ai-tech-badge">GitLab</span>
+                        <span class="ai-tech-badge">PagerDuty</span>
+                        <span class="ai-tech-badge">Grafana</span>
+                        <span class="ai-tech-badge">n8n</span>
+                        <span class="ai-tech-badge">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <div class="ai-project-card">
+                    <div class="ai-badge">🧠 Anomaly Detection</div>
+                    <h3>DevOps Anomaly Detector</h3>
+                    <p class="ai-project-description">
+                        Built AI agent for Prometheus metrics analysis and conversational log querying with advanced 
+                        anomaly detection capabilities. Context compression for efficient querying. 
+                        Delivered 8-week MVP roadmap with comprehensive documentation and integration guides.
+                    </p>
+                    <div class="ai-tech-stack">
+                        <span class="ai-tech-badge">Prometheus</span>
+                        <span class="ai-tech-badge">Python</span>
+                        <span class="ai-tech-badge">ML Models</span>
+                        <span class="ai-tech-badge">Grafana</span>
+                        <span class="ai-tech-badge">OpenAI</span>
+                    </div>
+                </div>
+
+                <div class="ai-project-card">
+                    <div class="ai-badge">⚡ Workflow Automation</div>
+                    <h3>Scalable AI Workflow Engine</h3>
+                    <p class="ai-project-description">
+                        Designed and implemented end-to-end AI workflow automation using n8n, integrating LLMs 
+                        to automate complex business processes. Built intelligent automation pipelines 
+                        that reduced manual processing time by 60% across multiple business functions.
+                    </p>
+                    <div class="ai-tech-stack">
+                        <span class="ai-tech-badge">n8n</span>
+                        <span class="ai-tech-badge">Vector DB</span>
+                        <span class="ai-tech-badge">RAG</span>
+                        <span class="ai-tech-badge">API Integration</span>
+                        <span class="ai-tech-badge">Automation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section" id="certifications">
+            <div class="section-header">
+                <span class="section-number">05.</span>
+                <h2>Certifications</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">🚁</div>
+                    <div class="cert-name">Remote Pilot Certification</div>
+                    <div class="cert-issuer">FAA (Federal Aviation Administration)</div>
+                    <div class="cert-date">Active</div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">🤖</div>
+                    <div class="cert-name">Prompt Engineering & Programming with OpenAI</div>
+                    <div class="cert-issuer">OpenAI / Professional Certification</div>
+                    <div class="cert-date">Active</div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">🧠</div>
+                    <div class="cert-name">Building Customized LLMs with OpenAI</div>
+                    <div class="cert-issuer">OpenAI / Advanced Training</div>
+                    <div class="cert-date">Active</div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section class="section" id="contact">
             <div class="section-header">
-                <span class="section-number">04.</span>
+                <span class="section-number">06.</span>
                 <h2>Let's Connect</h2>
                 <div class="section-divider"></div>
             </div>
@@ -1020,7 +1282,7 @@
                 <div class="contact-card">
                     <div class="contact-icon">📧</div>
                     <h3>Email</h3>
-                    <a href="mailto:jesmiteja17@gmail.com">jesmiteja17@gmail.com</a>
+                    <a href="/cdn-cgi/l/email-protection#b2d8d7c1dfdbc6d7d8d38385f2d5dfd3dbde9cd1dddf"><span class="__cf_email__" data-cfemail="751f1006181c01101f144442351218141c195b161a18">[email&#160;protected]</span></a>
                 </div>
 
                 <div class="contact-card">
@@ -1055,7 +1317,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Scroll progress bar
         window.addEventListener('scroll', () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -1090,12 +1352,4 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.timeline-item, .project-card, .skill-category').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
+        document.querySelectorAll('.timeline-item, .project-card, .skill-category').forEach(el
