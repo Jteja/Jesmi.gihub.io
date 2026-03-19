@@ -979,17 +979,19 @@
                 <div class="timeline-item">
                     <div class="timeline-header">
                         <div class="timeline-company">Mimecast</div>
-                        <div class="timeline-role">Site Reliability Engineer II</div>
+                        <div class="timeline-role">Site Reliability Engineer II / Jira Admin</div>
                         <div class="timeline-period">Feb 2023 - May 2025 | Boston, MA</div>
                     </div>
                     <ul class="timeline-achievements">
-                        <li>Led application migration from on-premises to Amazon EKS using Helm charts, minimizing downtime during PostgreSQL to AWS RDS migration</li>
-                        <li>Automated AWS S3 and RDS provisioning with reusable Terraform scripts, implementing security groups following least privilege principles</li>
-                        <li>Designed Grafana dashboards integrating Prometheus/Thanos/CloudWatch metrics for real-time operational visibility and SLO/SLI tracking</li>
-                        <li>Implemented severity-based Grafana alerting rules (warning/critical), reducing alert noise and improving MTTR</li>
-                        <li>Developed modular, version-controlled Terraform code integrated with CI/CD pipelines for infrastructure-as-code best practices</li>
-                        <li>Automated Jenkins plugin upgrades using version-controlled Puppet modules, ensuring configuration consistency</li>
-                        <li>Administered GitLab including user access management, GitLab Runner troubleshooting, and CI/CD failure resolution</li>
+                        <li>Led greenfield migration of legacy applications from on-premises to Amazon EKS using Helm charts, achieving zero-downtime deployment and 99.9% uptime SLO during PostgreSQL to AWS RDS database migration</li>
+                        <li>Administered enterprise identity and access management serving 500+ users across GitLab, SonarQube, and Nexus using LDAP integration and Okta SSO, managing user provisioning, group policies, and RBAC for secure authentication workflows</li>
+                        <li>Served as primary Jira administrator managing custom workflows, permission schemes, project configurations, and automation rules across 50+ engineering teams, integrating with Confluence and GitLab</li>
+                        <li>Automated AWS infrastructure provisioning (S3, RDS, ECR) using modular Terraform scripts, reducing deployment time by 60% and enabling consistent infrastructure delivery across dev/staging/production</li>
+                        <li>Architected comprehensive Grafana dashboards integrating Prometheus/Thanos/CloudWatch metrics for real-time operational visibility, tracking SLO/SLI indicators including uptime, p95/p99 response times, and throughput</li>
+                        <li>Implemented severity-based Grafana alerting rules (warning/critical) with intelligent routing, reducing alert noise by 45% and improving MTTR by 40% through actionable alerts for container health and node pressure</li>
+                        <li>Built observability stack with Prometheus service discovery, Thanos for long-term metrics retention, cAdvisor for container-level metrics, and node-exporter for host-level system metrics</li>
+                        <li>Automated Jenkins plugin version upgrades using Puppet configuration management, ensuring consistency across 20+ Jenkins instances and reducing manual upgrade time from 8 hours to 30 minutes</li>
+                        <li>Administered GitLab platform including user access management (RBAC), GitLab Runner troubleshooting, CI/CD pipeline optimization, and resolution of synchronization failures during version upgrades</li>
                     </ul>
                 </div>
 
@@ -1000,12 +1002,14 @@
                         <div class="timeline-period">Nov 2021 - Jan 2023 | Reston, VA (Remote)</div>
                     </div>
                     <ul class="timeline-achievements">
-                        <li>Defined and derived SLOs/SLIs for cloud and on-premises applications aligned with business SLAs, enabling data-driven monitoring</li>
-                        <li>Developed monitoring dashboards in AWS CloudWatch and Splunk with SLO/SLI-based alerts for critical services</li>
-                        <li>Led SRE enablement sessions and automation initiatives, reducing operational toil and manual interventions</li>
-                        <li>Collaborated across Agile/DevOps teams to accelerate deployments in Continuous Delivery pipeline</li>
-                        <li>Conducted capacity planning analyzing historical trends, growth projections, and performance test results</li>
-                        <li>Built AWS DynamoDB data models translating PostgreSQL schema into optimized NoSQL designs</li>
+                        <li>Defined and derived SLOs/SLIs for 25+ cloud-based and on-premises applications aligned with business SLAs, establishing data-driven monitoring framework and actionable alerting for critical financial services</li>
+                        <li>Designed and optimized monitoring dashboards in AWS CloudWatch and Splunk with SLO/SLI-based alerts, improving application observability and reducing incident detection time by 50%</li>
+                        <li>Enhanced Splunk dashboards to visualize key performance metrics, application logs, and business KPIs, significantly improving system resiliency and enabling proactive issue identification</li>
+                        <li>Led SRE enablement workshops and partnered with 10+ application teams to drive automation initiatives, reducing operational toil by 35% and eliminating repetitive manual interventions</li>
+                        <li>Collaborated across Agile and DevOps teams (Developers, QA, Release Management) to accelerate deployments in Continuous Delivery pipeline, reducing release cycle time from 2 weeks to 3 days</li>
+                        <li>Conducted comprehensive capacity planning by analyzing historical usage trends, growth projections, and performance test results, ensuring systems met current demand and scaled for 30% projected annual growth</li>
+                        <li>Designed AWS DynamoDB data models translating PostgreSQL relational schema into optimized NoSQL patterns using partition keys, sort keys, and Global Secondary Indexes (GSI) for multi-attribute queries</li>
+                        <li>Mentored 5+ new team members during multiple sprints, providing hands-on training in SRE practices, domain knowledge sharing, and incident troubleshooting to accelerate onboarding</li>
                     </ul>
                 </div>
 
@@ -1016,12 +1020,16 @@
                         <div class="timeline-period">Mar 2020 - Oct 2021 | Malvern, PA</div>
                     </div>
                     <ul class="timeline-achievements">
-                        <li>Developed and implemented requirements for TLM (SmartStream) web-based trading lifecycle management application</li>
-                        <li>Created and monitored Control-M jobs to automate application workflows</li>
-                        <li>Implemented configuration changes and version updates using Ansible Tower for consistent automated deployments</li>
-                        <li>Administered WebSphere application server, configuring JVM arguments and traffic routing</li>
-                        <li>Built Jenkins CI/CD pipelines for end-to-end automation of build, test, and artifact delivery processes</li>
-                        <li>Participated in major incident management, providing rapid root cause isolation and RCA documentation</li>
+                        <li>Developed and implemented business requirements for TLM (SmartStream) trading lifecycle management application supporting $2B+ daily transaction volume</li>
+                        <li>Automated application workflows using Control-M job scheduler, creating 50+ batch jobs for trade processing, reconciliation, and reporting with dependency management</li>
+                        <li>Administered WebSphere Application Server infrastructure and TLM trading platform backend systems including user session management, JDBC connection pools, JVM tuning, and application deployment supporting $2B+ daily volume</li>
+                        <li>Provided Tier 2/3 technical support utilizing command-line tools, VS Code, Git workflows, and SQL queries to troubleshoot complex application failures and database connectivity issues with sub-30-minute resolution SLA</li>
+                        <li>Implemented configuration changes and version updates for TLM application using Ansible Tower, enabling consistent automated deployments across 15+ environments and reducing deployment errors by 70%</li>
+                        <li>Built and maintained Ansible playbooks and roles for TLM application lifecycle management (installation, configuration, upgrades), reducing manual deployment time from 4 hours to 20 minutes</li>
+                        <li>Designed and maintained Jenkins CI/CD pipelines for end-to-end build automation, integrating SVN/Bitbucket source control, Maven builds, SonarQube quality gates, and Nexus artifact management</li>
+                        <li>Managed Bitbucket and SVN repositories for version control, implementing branching strategies, merge workflows, and deployment of release artifacts to Nexus repository</li>
+                        <li>Participated in major incident management (MIM) bridge calls, providing rapid root cause analysis for database connectivity issues, slow SQL queries, and backend dependency outages</li>
+                        <li>Created post-incident RCA documentation and implemented preventive measures, reducing incident recurrence rate by 40% and improving MTTR from 90 minutes to 35 minutes</li>
                     </ul>
                 </div>
 
@@ -1032,11 +1040,12 @@
                         <div class="timeline-period">Jul 2019 - Feb 2020 | Norwalk, CT</div>
                     </div>
                     <ul class="timeline-achievements">
-                        <li>Developed Python programs for Java application deployment and automated Shell scripts for release automation</li>
-                        <li>Created Ansible Playbooks with Python SSH wrappers to manage AWS node configurations</li>
-                        <li>Implemented Chef configuration management for automated provisioning across multiple Linux systems</li>
-                        <li>Automated Jenkins pipelines for artifact creation in Nexus repository</li>
-                        <li>Designed basic RESTful APIs using Python for CRUD operations with PostgreSQL integration</li>
+                        <li>Developed Python automation scripts for Java application deployment and release processes, integrating with Jenkins CI/CD pipelines for end-to-end build and deployment automation</li>
+                        <li>Created Ansible playbooks with Python SSH wrappers to manage AWS EC2 node configurations, automating package installation, service management, and security hardening across 100+ instances</li>
+                        <li>Implemented Chef configuration management framework to automate system provisioning, package management, and service configuration using Chef recipes and cookbooks across multiple Linux distributions</li>
+                        <li>Designed and implemented RESTful APIs using Python Flask framework for CRUD operations, applying PostgreSQL best practices for efficient database interactions and transaction management</li>
+                        <li>Built Jenkins automation pipelines for artifact creation, versioning, and deployment to Nexus repository, establishing standardized release management workflow</li>
+                        <li>Developed SQL queries and database scripts for application data loading, backup automation, and data validation processes supporting production applications</li>
                     </ul>
                 </div>
 
@@ -1047,11 +1056,11 @@
                         <div class="timeline-period">Jun 2016 - Nov 2016 | Hyderabad, India</div>
                     </div>
                     <ul class="timeline-achievements">
-                        <li>Managed 1500+ physical and VMware virtual servers across RHEL 7, CentOS, and Ubuntu 12.x</li>
-                        <li>Performed package management using RPM, YUM, and Apt-get for server stability and security</li>
-                        <li>Developed Bash and Python automation scripts for backup, monitoring, and system administration</li>
-                        <li>Administered Jenkins continuous integration server for SVN repositories</li>
-                        <li>Conducted performance tuning and log management using Splunk</li>
+                        <li>Managed 1500+ physical and VMware virtual servers across Red Hat Enterprise Linux 7, CentOS, and Ubuntu 12.x environments, supporting diverse application stacks and business-critical services</li>
+                        <li>Performed package management using RPM, YUM, and Apt-get for maintaining system stability, security patching, and software lifecycle management across enterprise server fleet</li>
+                        <li>Developed Bash and Python automation scripts for backup operations, system monitoring, disk space verification, user management, iptables firewall configuration, and package installation</li>
+                        <li>Administered Jenkins continuous integration server installation, configuration, and integration with SVN repositories for automated build processes</li>
+                        <li>Conducted performance tuning on Linux servers using CLI tools, monitored system performance metrics, and managed centralized log aggregation and analysis using Splunk</li>
                     </ul>
                 </div>
             </div>
@@ -1232,12 +1241,6 @@
             </div>
 
             <div class="certifications-grid">
-                <div class="cert-card">
-                    <div class="cert-icon">🚁</div>
-                    <div class="cert-name">Remote Pilot Certification</div>
-                    <div class="cert-issuer">FAA (Federal Aviation Administration)</div>
-                    <div class="cert-date">Active</div>
-                </div>
 
                 <div class="cert-card">
                     <div class="cert-icon">🤖</div>
