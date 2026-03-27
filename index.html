@@ -983,13 +983,16 @@
                         <div class="timeline-period">Feb 2023 - May 2025 | Boston, MA</div>
                     </div>
                     <ul class="timeline-achievements">
+                        <li></li>
                         <li>Led greenfield migration of legacy applications from on-premises to Amazon EKS using Helm charts, achieving zero-downtime deployment and 99.9% uptime SLO during PostgreSQL to AWS RDS database migration</li>
-                        <li>Administered enterprise identity and access management serving 500+ users across GitLab, SonarQube, and Nexus using LDAP integration and Okta SSO, managing user provisioning, group policies, and RBAC for secure authentication workflows</li>
+                        <li>Administered enterprise identity and access management serving 2000+ users across Atlassian tools (JIRA, Confluence and JSM) GitLab, SonarQube, and Nexus using LDAP integration managing user provisioning, group policies, and role-based access controls (RBAC) for secure authentication workflows</li>
                         <li>Served as primary Jira administrator managing custom workflows, permission schemes, project configurations, and automation rules across 50+ engineering teams, integrating with Confluence and GitLab</li>
                         <li>Automated AWS infrastructure provisioning (S3, RDS, ECR) using modular Terraform scripts, reducing deployment time by 60% and enabling consistent infrastructure delivery across dev/staging/production</li>
+                        <li>Led incident management bridge calls and conducted post-mortem analyses for critical Nexus and SonarQube outages; identified root causes and drove the migration of both applications from on-premises to AWS EKS using Kubernetes and Helm, reducing mean downtime from 45 minutes to 5 minutes and establishing post-incident runbooks adopted across the engineering org</li>
                         <li>Architected comprehensive Grafana dashboards integrating Prometheus/Thanos/CloudWatch metrics for real-time operational visibility, tracking SLO/SLI indicators including uptime, p95/p99 response times, and throughput</li>
                         <li>Implemented severity-based Grafana alerting rules (warning/critical) with intelligent routing, reducing alert noise by 45% and improving MTTR by 40% through actionable alerts for container health and node pressure</li>
                         <li>Built observability stack with Prometheus service discovery, Thanos for long-term metrics retention, cAdvisor for container-level metrics, and node-exporter for host-level system metrics</li>
+                        <li>Designed incident automation by integrating Grafana alerting with JSM to auto-trigger a Zoom bridge call with a Jira incident ticket and, upon resolution, automatically generate a post-action ticket and a Confluence post-mortem page. led multiple live incident calls using this workflow.</li>
                         <li>Automated Jenkins plugin version upgrades using Puppet configuration management, ensuring consistency across 20+ Jenkins instances and reducing manual upgrade time from 8 hours to 30 minutes</li>
                         <li>Administered GitLab platform including user access management (RBAC), GitLab Runner troubleshooting, CI/CD pipeline optimization, and resolution of synchronization failures during version upgrades</li>
                     </ul>
@@ -1003,13 +1006,16 @@
                     </div>
                     <ul class="timeline-achievements">
                         <li>Defined and derived SLOs/SLIs for 25+ cloud-based and on-premises applications aligned with business SLAs, establishing data-driven monitoring framework and actionable alerting for critical financial services</li>
+                        <li>Led SRE enablement workshops and partnered with 10+ application teams to drive automation initiatives, reducing operational toil by 35% and eliminating repetitive manual interventions</li>
                         <li>Designed and optimized monitoring dashboards in AWS CloudWatch and Splunk with SLO/SLI-based alerts, improving application observability and reducing incident detection time by 50%</li>
                         <li>Enhanced Splunk dashboards to visualize key performance metrics, application logs, and business KPIs, significantly improving system resiliency and enabling proactive issue identification</li>
+                        <li>Implemented error budget tracking for critical applications using Splunk dashboards to continuously monitor availability against SLO targets; analyzed burn rate trends to surface at-risk services</li>
+                        <li>Drove targeted reliability improvement meetings, and increased application uptime — enabling data-driven conversations with engineering teams on when to slow feature delivery to protect reliability commitments</li>
                         <li>Led SRE enablement workshops and partnered with 10+ application teams to drive automation initiatives, reducing operational toil by 35% and eliminating repetitive manual interventions</li>
                         <li>Collaborated across Agile and DevOps teams (Developers, QA, Release Management) to accelerate deployments in Continuous Delivery pipeline, reducing release cycle time from 2 weeks to 3 days</li>
                         <li>Conducted comprehensive capacity planning by analyzing historical usage trends, growth projections, and performance test results, ensuring systems met current demand and scaled for 30% projected annual growth</li>
                         <li>Designed AWS DynamoDB data models translating PostgreSQL relational schema into optimized NoSQL patterns using partition keys, sort keys, and Global Secondary Indexes (GSI) for multi-attribute queries</li>
-                        <li>Mentored 5+ new team members during multiple sprints, providing hands-on training in SRE practices, domain knowledge sharing, and incident troubleshooting to accelerate onboarding</li>
+                        <li>Mentored 10 new team members during multiple sprints, providing hands-on training in SRE practices, domain knowledge sharing, and incident troubleshooting to accelerate onboarding</li>
                     </ul>
                 </div>
 
